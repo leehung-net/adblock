@@ -594,7 +594,7 @@ if ping -q -c 1 -W 1 $PING_TARGET > /dev/null 2>&1; then
 
 	lognecho "[PROC] Updating official blacklist/whitelist files"
 	MPGETSSL "https://raw.githubusercontent.com/m-parashar/adblock/master/blacklists/blacklist" | GREPFILTER > $BLACKLIST
-	MPGETSSL "https://raw.githubusercontent.com/m-parashar/adblock/master/whitelists/whitelist" | GREPFILTER > $WHITELIST
+	MPGETSSL "https://raw.githubusercontent.com/leehung-net/adblock/master/whitelists/whitelist" | GREPFILTER > $WHITELIST
 
 	if [ -n "$(which uudecode)" ]; then
 		MPGETSSL "https://raw.githubusercontent.com/m-parashar/adblock/master/whitelists/fruitydomains.uudecode" > $BASE64WL
