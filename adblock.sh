@@ -167,6 +167,7 @@ fi
 alias SEDCLEAN="sed -r 's/^[[:blank:]]*//; s/[[:blank:]]*$//; s/^[[:punct:]]*//; s/[[:punct:]]*$//; /^$/d; /^\s*$/d'"
 alias GREPFILTER="grep -o '^[^#]*' | grep -vF -e \"::\" -e \";\" -e \"//\" -e \"http\" -e \"https\" -e \"@\" -e \"mailto\" | tr -cd '\000-\177'"
 alias AWKFILTER="awk '{print \$2}'"
+alias AWKFILTERComma="awk -F, '{print $1}'"
 
 ###############################################################################
 
@@ -463,6 +464,12 @@ if ping -q -c 1 -W 1 $PING_TARGET > /dev/null 2>&1; then
 	lognecho "[PROC] Processing adaway list"
 	MPGETSSL "https://adaway.org/hosts.txt" | GREPFILTER | AWKFILTER >> $TMPHOSTS
 
+	lognecho "[PROC] Processing blocking hosting in vietnam"
+	MPGETSSL "https://github.com/bigdargon/hostsVN/blob/master/source/hosts-VN.txt" | GREPFILTER | AWKFILTER >> $TMPHOSTS
+
+	lognecho "[PROC] Processing blocking googlevideo.com"
+	MPGETSSL "https://api.hackertarget.com/hostsearch/?q=googlevideo.com" | AWKFILTERComma | GREPFILTER | AWKFILTER >> $TMPHOSTS
+
 	if [ $BLITZ -ge 1 ]; then
 		lognecho "[PROC] Unlocking BLITZ=1 level lists"
 
@@ -645,9 +652,11 @@ lognecho "[PROC] Processing final mphosts/mpdomains files"
 LC_ALL=C cat $TMPHOSTS | SEDCLEAN | cat TMP_BLACKLIST - | grep -Fvwf TMP_WHITELIST | sort | uniq | awk -v "IP=$ADHOLE_IP" '{sub(/\r$/,""); print IP" "$0}' > $MPHOSTS
 LC_ALL=C cat $TMPDOMAINS | SEDCLEAN | grep -Fvwf TMP_WHITELIST | sort | uniq > $MPDOMAINS
 
+cp $MPHOSTS > MPHOSTSCopy
+
 lognecho "[PROC] Removing temporary files"
-rm -f $TMPHOSTS
-rm -f $TMPDOMAINS
+# rm -f $TMPHOSTS
+# rm -f $TMPDOMAINS
 rm -f TMP_BLACKLIST
 rm -f TMP_WHITELIST
 
