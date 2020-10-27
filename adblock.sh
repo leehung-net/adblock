@@ -655,8 +655,8 @@ LC_ALL=C cat $TMPDOMAINS | SEDCLEAN | grep -Fvwf TMP_WHITELIST | sort | uniq > $
 cp $MPHOSTS > MPHOSTSCopy
 
 lognecho "[PROC] Removing temporary files"
-# rm -f $TMPHOSTS
-# rm -f $TMPDOMAINS
+rm -f $TMPHOSTS
+rm -f $TMPDOMAINS
 rm -f TMP_BLACKLIST
 rm -f TMP_WHITELIST
 
