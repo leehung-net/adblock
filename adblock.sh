@@ -652,8 +652,6 @@ lognecho "[PROC] Processing final mphosts/mpdomains files"
 LC_ALL=C cat $TMPHOSTS | SEDCLEAN | cat TMP_BLACKLIST - | grep -Fvwf TMP_WHITELIST | sort | uniq | awk -v "IP=$ADHOLE_IP" '{sub(/\r$/,""); print IP" "$0}' > $MPHOSTS
 LC_ALL=C cat $TMPDOMAINS | SEDCLEAN | grep -Fvwf TMP_WHITELIST | sort | uniq > $MPDOMAINS
 
-cp $MPHOSTS > MPHOSTSCopy
-
 lognecho "[PROC] Removing temporary files"
 rm -f $TMPHOSTS
 rm -f $TMPDOMAINS
