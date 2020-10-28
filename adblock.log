@@ -79,3 +79,65 @@
 [PROC] Uploading files to router...
 [INFO] Total time: 0:45 minutes
 [INFO] DONE
+======================================================
+|                 adblock for DD-WRT                 |
+|                 https://adblock.sh                 |
+|       https://github.com/m-parashar/adblock        |
+|           Copyright 2020 Manish Parashar           |
+======================================================
+             Tue Oct 27 21:22:21 EDT 2020
+[INFO] VERSION: 20200420
+[INFO] CMDARGS: -3
+# REMOTE: ON | IP: 192.168.1.1
+[PROC] Downloading files from router...
+[INFO] NETWORK: UP | MODE: ONLINE
+[INFO] IP ADDRESS FOR ADS: 0.1.2.3
+[INFO] SECURE [0=NO | 1=YES]: 0
+[INFO] BLITZ LEVEL [0|1|2|3]: 3
+[PROC] Creating mpdomains file
+[PROC] Creating mphosts file
+[PROC] Processing StevenBlack lists
+[PROC] Processing notracking blocklists
+[PROC] Processing Disconnect.me lists
+[PROC] Processing quidsup/notrack lists
+[PROC] Processing MalwareDomains lists
+[PROC] Processing adaway list
+[PROC] Processing blocking hosting in vietnam
+[PROC] Processing blocking googlevideo.com
+[PROC] Unlocking BLITZ=1 level lists
+[PROC] Processing more StevenBlack lists
+[PROC] Processing dshield lists
+[PROC] Processing pgl.yoyo.org list
+[PROC] Processing Securemecca list
+[PROC] Processing cryptomining and porn lists
+[PROC] Processing Easylist & w3kbl lists
+[PROC] Unlocking BLITZ=2 level lists
+[PROC] Processing even more StevenBlack lists
+[PROC] Processing Cameleon list
+[PROC] Processing winhelp2002 list
+[PROC] Processing someonewhocares list
+[PROC] Processing anudeepND lists
+[PROC] Processing CHEF-KOCH lists
+[PROC] Processing joewein.de LLC list
+[PROC] Processing Windows telemetry lists
+[PROC] Processing smart TV blocklists
+[PROC] Processing a few more blocklists
+[PROC] Unlocking BLITZ=3 level lists
+[PROC] Processing dbl.oisd.nl list
+[PROC] Processing Mahakala list
+[PROC] Processing HostsFile.mine.nu list
+[PROC] Processing Kowabit list
+[PROC] Updating official blacklist/whitelist files
+[INFO] Size of /tmp/mphosts.tmp: 44M
+[INFO] Size of /tmp/mpdomains.tmp: 6.3M
+[PROC] Processing blacklist/whitelist files
+[PROC] Processing final mphosts/mpdomains files
+[PROC] Removing temporary files
+[INFO] Size of ./mphosts: 43M
+[INFO] Size of ./mpdomains: 5.8M
+[INFO] Number of hosts blocked: approx 1493704
+[INFO] Number of domains blocked: approx 177481
+[PROC] Uploading files to router...
+[INFO] Total time: 1:22 minutes
+[INFO] DONE
+[INFO] Push files to git
