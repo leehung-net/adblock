@@ -683,6 +683,10 @@ RTSECONDS=$(( $((TIMERSTOP - TIMERSTART)) %60 ))
 lognecho "[INFO] Total time: $RTMINUTES:$RTSECONDS minutes"
 lognecho "[INFO] DONE"
 logger "[INFO] $(basename "$0") finished"
+lognecho "[INFO] Push files to git"
+git add .
+git commit -am "update file $TIMERSTART"
+git push origin master
 
 # log errors if DEBUG is ON
 if [ $DEBUG -eq 1 ]; then

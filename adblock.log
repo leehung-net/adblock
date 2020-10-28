@@ -1,0 +1,81 @@
+======================================================
+|                 adblock for DD-WRT                 |
+|                 https://adblock.sh                 |
+|       https://github.com/m-parashar/adblock        |
+|           Copyright 2020 Manish Parashar           |
+======================================================
+             Tue Oct 27 21:02:27 EDT 2020
+[INFO] VERSION: 20200420
+[INFO] CMDARGS: 
+# REMOTE: ON | IP: 192.168.1.1
+[PROC] Downloading files from router...
+[INFO] NETWORK: UP | MODE: ONLINE
+[INFO] IP ADDRESS FOR ADS: 0.1.2.3
+[INFO] SECURE [0=NO | 1=YES]: 0
+[INFO] BLITZ LEVEL [0|1|2|3]: 1
+[PROC] Creating mpdomains file
+[PROC] Creating mphosts file
+[PROC] Processing StevenBlack lists
+[PROC] Processing notracking blocklists
+[PROC] Processing Disconnect.me lists
+[PROC] Processing quidsup/notrack lists
+[PROC] Processing MalwareDomains lists
+[PROC] Processing adaway list
+[PROC] Processing blocking hosting in vietnam
+[PROC] Processing blocking googlevideo.com
+[PROC] Unlocking BLITZ=1 level lists
+[PROC] Processing more StevenBlack lists
+[PROC] Processing dshield lists
+[PROC] Processing pgl.yoyo.org list
+[PROC] Processing Securemecca list
+[PROC] Processing cryptomining and porn lists
+[PROC] Processing Easylist & w3kbl lists
+[INFO] Size of /tmp/mphosts.tmp: 0
+[INFO] Size of /tmp/mpdomains.tmp: 0
+[ERROR] Check logs. Quitting.
+======================================================
+|                 adblock for DD-WRT                 |
+|                 https://adblock.sh                 |
+|       https://github.com/m-parashar/adblock        |
+|           Copyright 2020 Manish Parashar           |
+======================================================
+             Tue Oct 27 21:04:37 EDT 2020
+[INFO] VERSION: 20200420
+[INFO] CMDARGS: 
+# REMOTE: ON | IP: 192.168.1.1
+[PROC] Downloading files from router...
+[INFO] NETWORK: UP | MODE: ONLINE
+[INFO] IP ADDRESS FOR ADS: 0.1.2.3
+[INFO] SECURE [0=NO | 1=YES]: 0
+[INFO] BLITZ LEVEL [0|1|2|3]: 1
+[PROC] Downloading / updating cURL certificate
+[PROC] Creating mpdomains file
+[PROC] Creating mphosts file
+[PROC] Processing StevenBlack lists
+[PROC] Processing notracking blocklists
+[PROC] Processing Disconnect.me lists
+[PROC] Processing quidsup/notrack lists
+[PROC] Processing MalwareDomains lists
+[PROC] Processing adaway list
+[PROC] Processing blocking hosting in vietnam
+[PROC] Processing blocking googlevideo.com
+[PROC] Unlocking BLITZ=1 level lists
+[PROC] Processing more StevenBlack lists
+[PROC] Processing dshield lists
+[PROC] Processing pgl.yoyo.org list
+[PROC] Processing Securemecca list
+[PROC] Processing cryptomining and porn lists
+[PROC] Processing Easylist & w3kbl lists
+[PROC] Updating official blacklist/whitelist files
+[INFO] Size of /tmp/mphosts.tmp: 16M
+[INFO] Size of /tmp/mpdomains.tmp: 6.3M
+[PROC] Processing blacklist/whitelist files
+[PROC] Processing final mphosts/mpdomains files
+[PROC] Removing temporary files
+[INFO] Size of ./mphosts: 16M
+[INFO] Size of ./mpdomains: 5.8M
+[INFO] Number of hosts blocked: approx 550259
+[INFO] Number of domains blocked: approx 177481
+[PROC] Uploading files to router...
+[INFO] Total time: 0:45 minutes
+[INFO] DONE
